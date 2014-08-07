@@ -1,0 +1,1059 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>nativeDroid - Theme for jQuery Mobile</title>
+		
+		 <meta name="content type"  content="text/html;" http-equiv="content-type" charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		
+		
+		
+		
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- jQueryMobileCSS - original without styling -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.dark.css" id='jQMnDColor' />
+		<!-- nativeDroid: Color Schemes si kitas este, el selector no funciona... nuse porque -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+
+
+		
+		
+		
+		
+		
+		
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		
+		    <script>
+			//esto es para cargar el menu principal como primera pagina, sin estar colocada la primera en codigo (si la ponemos la primera aparece un problema raro de parpadeo...esto es un feo apaño... pero parece ke funciona)
+           //OJO tiene que ir aki colocado, antes de ke cargue el jquery MOBILE
+		   $(document).on("mobileinit",function() {
+                $.mobile.autoInitializePage = false;
+            });        
+			</script>
+		
+		
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+		
+		
+		
+		
+		<!-- Extras for: Cards.html -->
+	    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+		
+		
+		<!-- CSS para la animación de objetos, como las letras del titulo -->
+		 <link rel="stylesheet" href="css/animate.min.css">
+		
+		
+		<!-- Mi CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+		
+
+		
+		
+
+
+
+			<!-- Mi Javascript propio http://daneden.github.io/animate.css/ -->
+		
+		<script>
+			var userLang = navigator.language || navigator.userLanguage
+			userLang = userLang.substr(0,2);
+			var miJSurl="http://msnzapps.com/coleccion/kamasutra/js/miJS_"+userLang+".js";
+			var langurl="http://msnzapps.com/coleccion/kamasutra/js/lang_"+userLang+".js";
+			
+			var head=document.getElementsByTagName('head')[0];
+			
+			var script1=document.createElement('script');
+			script1.setAttribute('type', 'text/javascript');
+			script1.setAttribute('src', miJSurl);
+			head.appendChild(script1);
+			
+			var script2=document.createElement('script');
+			script2.setAttribute('type', 'text/javascript');
+			script2.setAttribute('src', langurl);
+			head.appendChild(script2);
+		</script>
+			
+		
+		<!--	
+		<script src="http://msnzapps.com/coleccion/kamasutra/js/miJS_es.js"></script>
+		-->
+				<!-- IDIOMAS -->
+		<!--
+		<script src="http://msnzapps.com/coleccion/kamasutra/js/lang_es.js"></script>	
+		-->
+
+
+
+		<!-- plugin elimnar 300ms delay -->
+		<script type='application/javascript' src='/js/fastclick.js'></script>
+
+		<script>	
+//para el fastclick 300 ms		
+		window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+		</script>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+    </head>
+    <body>
+
+	
+	
+
+
+
+
+	
+
+	
+
+	
+	
+	
+<!-- Start -->	
+<div data-role="page" data-theme='b' id="page_vertodas">
+
+
+
+        <div data-role="content">   
+		<br>	
+		<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
+
+            <li id="li1" style="" >
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-9);">
+                
+				<img id="idimg1" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo1"></h2>			
+                <p id="txtt1"></p>
+				
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra1" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+				
+				
+				
+             </a>
+			</li>
+
+			<br>
+			
+            <li id="li2" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-8);">
+               
+				<img id="idimg2" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+				<h2  id="titulo2"></h2>
+                <p id="txtt2"></p>
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra2" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+							
+				
+             </a>
+			</li>
+
+			<br>		
+			
+            <li id="li3" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-7);">
+			 
+                <img id="idimg3" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo3"></h2>
+                <p id="txtt3"></p>
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra3" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+			
+				
+             </a>
+			</li>
+
+			<br>
+			
+            <li id="li4" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-6);">
+			 
+                <img id="idimg4" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo4"></h2>
+                <p id="txtt4"></p>
+	
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra4" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+		
+	
+             </a>
+			</li>
+
+			<br>			
+			
+            <li id="li5" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-5);">
+			 
+                <img id="idimg5" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo5"></h2>
+                <p id="txtt5"></p>
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra5" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+		
+
+				
+             </a>
+			</li>
+
+			<br>	
+
+            <li id="li6" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-4);">
+			 
+                <img id="idimg6" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo6"></h2>
+                <p id="txtt6"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra6" class="progress-filled ui-btn-up-b ui-btn-corner-left" style=""></div>
+				</div>
+			
+	
+             </a>
+			</li>
+
+			<br>
+
+            <li id="li7" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-3);">
+			 
+                <img id="idimg7" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo7"></h2>
+                <p id="txtt7"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra7" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+		
+		
+             </a>
+			</li>
+
+			<br>
+
+            <li id="li8" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-2);">
+			 
+                <img id="idimg8" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo8"></h2>
+                <p id="txtt8"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra8" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+						
+             </a>
+			</li>
+
+			<br>	
+
+            <li id="li9" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-1);">
+			 
+                <img id="idimg9" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo9"></h2>
+                <p id="txtt9"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+						<div id="barra9" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+						
+             </a>
+			</li>
+
+			<br>
+			
+            <li id="li10" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjeta1((PagActual*10)-0);">
+			 
+                <img id="idimg10" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="titulo10"></h2>
+                <p id="txtt10"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="barra10" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+						
+             </a>
+			</li>
+
+			<br>			
+			
+			
+        </ul>   
+        </div>
+		
+		
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' data-id="footer_ver_todas" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page_vertodas" onclick="PagActual=PagActual-1; Recargar_Ver_Todas();refreshPage();"><i  style="font-size: 15px !important;"class='blIcon fa fa-chevron-left'></i></a></li>
+					<li><a href="#MenuPrincipal"><i style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+					<li><a href="#page_vertodas" onclick="PagActual=PagActual+1; Recargar_Ver_Todas();refreshPage();"><i style="font-size: 15px !important;" class='blIcon fa fa-chevron-right'></i></a></li>
+				</ul>
+			</div>
+		</div>
+		
+	
+		
+</div>
+<!-- Fin -->		
+	
+	
+
+
+
+	
+
+
+	
+	
+
+	
+	
+	
+	<!-- Start -->	
+<div data-role="page" data-theme='b' id="page_vertodas_mejores">
+
+
+
+        <div data-role="content">   
+		<br>	
+		<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
+
+            <li id="li1" style="" >
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-9);">
+                
+				<img id="m_idimg1" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo1"></h2>			
+                <p id="m_txtt1"></p>
+				
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra1" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+				
+				
+				
+             </a>
+			</li>
+
+			<br>
+			
+            <li id="li2" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-8);">
+               
+				<img id="m_idimg2" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+				<h2  id="m_titulo2"></h2>
+                <p id="m_txtt2"></p>
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra2" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+							
+				
+             </a>
+			</li>
+
+			<br>		
+			
+            <li id="li3" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-7);">
+			 
+                <img id="m_idimg3" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo3"></h2>
+                <p id="m_txtt3"></p>
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra3" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+			
+				
+             </a>
+			</li>
+
+			<br>
+			
+            <li id="li4" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-6);">
+			 
+                <img id="m_idimg4" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo4"></h2>
+                <p id="m_txtt4"></p>
+	
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra4" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+		
+	
+             </a>
+			</li>
+
+			<br>			
+			
+            <li id="li5" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-5);">
+			 
+                <img id="m_idimg5" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo5"></h2>
+                <p id="m_txtt5"></p>
+
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra5" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+		
+
+				
+             </a>
+			</li>
+
+			<br>	
+
+            <li id="li6" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-4);">
+			 
+                <img id="m_idimg6" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo6"></h2>
+                <p id="m_txtt6"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra6" class="progress-filled ui-btn-up-b ui-btn-corner-left" style=""></div>
+				</div>
+			
+	
+             </a>
+			</li>
+
+			<br>
+
+            <li id="li7" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-3);">
+			 
+                <img id="m_idimg7" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo7"></h2>
+                <p id="m_txtt7"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra7" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+		
+		
+             </a>
+			</li>
+
+			<br>
+
+            <li id="li8" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-2);">
+			 
+                <img id="m_idimg8" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo8"></h2>
+                <p id="m_txtt8"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra8" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+						
+             </a>
+			</li>
+
+			<br>	
+
+            <li id="li9" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-1);">
+			 
+                <img id="m_idimg9" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo9"></h2>
+                <p id="m_txtt9"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+						<div id="m_barra9" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+						
+             </a>
+			</li>
+
+			<br>
+			
+            <li id="li10" style="">
+			 <a href="#page_ver_una1" onclick="VerTarjetaMejores((PagActualMejores*10)-0);">
+			 
+                <img id="m_idimg10" src="" width="150" height="150">
+				<p style="float:right;" class="ui-btn ui-btn-icon-right ui-icon-carat-r"></p>
+                <h2  id="m_titulo10"></h2>
+                <p id="m_txtt10"></p>
+				
+				<div class="progress ui-bar-c ui-btn-corner-all" >
+					<div id="m_barra10" class="progress-filled ui-btn-up-b ui-btn-corner-left" style="width: 50%;"></div>
+				</div>
+						
+             </a>
+			</li>
+
+			<br>			
+			
+			
+        </ul>   
+        </div>
+		
+		
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' data-id="footer_ver_todas" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page_vertodas" onclick="PagActual=PagActual-1;Recargar_Ver_Todas();refreshPage();"><i  style="font-size: 15px !important;"class='blIcon fa fa-chevron-left'></i></a></li>
+					<li><a href="#MenuPrincipal"><i style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+					<li><a href="#page_vertodas" onclick="PagActual=PagActual+1; Recargar_Ver_Todas();refreshPage();"><i style="font-size: 15px !important;" class='blIcon fa fa-chevron-right'></i></a></li>
+				</ul>
+			</div>
+		</div>
+		
+	
+		
+</div>
+<!-- Fin -->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- Start -->
+<div data-role="page" data-theme='b' id="page_ver_una1">
+
+
+
+
+
+        
+        <div data-role="content">   
+			<ul data-nativedroid-plugin='cards'>
+	
+				<li id="licard" data-cards-type='text'>
+				
+					<h1 id="1card_titulo1"></h1>
+					<div id="card_separador"></div>
+					<br>
+					<div id="card_imagen"><img id="1card_idimg1" src=""></div>	
+					<p id="1card_txtt1"></p>
+					<br>			
+					<div id="1like_boton1" class="likebotonpartido1" onclick=""><a href="" ><i class='blIcon fa fa-thumbs-up'></i><span id="translate7"></span></a></div>
+					<div id="1like_boton2" class="likebotonpartido2" onclick=""><a href=""  ><i class='blIcon fa fa-thumbs-down'></i><span id="translate8"></span></a></div>	
+					<br><br><br> <br> 
+				</li>
+							
+
+			</ul>
+
+	        
+        </div>
+
+
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page_ver_una2" onclick="VerTarjeta2(parseInt(IdCardActual)-1);"><i style="font-size: 15px !important;" class='blIcon fa fa-chevron-left'></i></a></li>
+					<li><a href="#MenuPrincipal"><i  style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+					<li><a href="#page_ver_una2" onclick="VerTarjeta2(parseInt(IdCardActual)+1);"><i  style="font-size: 15px !important;" class='blIcon fa fa-chevron-right'></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+</div>
+<!-- Fin -->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+<!-- Start -->
+<div data-role="page" data-theme='b' id="page_ver_una2">
+
+
+
+
+
+        
+        <div data-role="content">   
+			<ul data-nativedroid-plugin='cards'>
+	
+				<li id="licard" data-cards-type='text'>
+				
+					<h1 id="2card_titulo1"></h1>
+					<div id="card_separador"></div>
+					<br>
+					<div id="card_imagen"><img id="2card_idimg1" src=""></div>	
+					<p id="2card_txtt1"></p>
+					<br>			
+					<div id="2like_boton1" class="likebotonpartido1" onclick=""><a href="" ><i class='blIcon fa fa-thumbs-up'></i><span id="translate7"></span></a></div>
+					<div id="2like_boton2" class="likebotonpartido2" onclick=""><a href=""  ><i class='blIcon fa fa-thumbs-down'></i><span id="translate8"></span></a></div>	
+					<br><br><br> <br> 
+				</li>
+							
+
+			</ul>
+
+	        
+        </div>
+
+
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page_ver_una1" onclick="VerTarjeta1(parseInt(IdCardActual)-1);"><i style="font-size: 15px !important;" class='blIcon fa fa-chevron-left'></i></a></li>
+					<li><a href="#MenuPrincipal"><i  style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+					<li><a href="#page_ver_una1" onclick="VerTarjeta1(parseInt(IdCardActual)+1);"><i  style="font-size: 15px !important;" class='blIcon fa fa-chevron-right'></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+</div>
+<!-- Fin -->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+<!-- Start -->
+<div data-role="page" data-theme='b' id="page_selector">
+
+
+
+
+
+
+        <div data-role="content">   
+			<ul data-nativedroid-plugin='cards'>
+	
+				<li id="licard" data-cards-type='text'>
+				
+
+				
+               <ul data-role="listview" data-inset="true">
+        
+            
+      
+                    <li data-role="fieldcontain">
+                    <span id="translate21" ></span><i style="margin-left:3%;" class='lIcon fa fa-male'></i>
+                        <input id="slide1" type="range" name="slider2" id="slider2b" value="3" min="1" max="5" data-highlight="true">
+                    </li>
+					
+					<li data-role="fieldcontain">
+                    <span id="translate22"></span><i style="margin-left:3%;" class='lIcon fa fa-female'></i>
+                        <input id="slide2" type="range" name="slider2" id="slider2b" value="3" min="1" max="5" data-highlight="true">
+                    </li>
+					
+					<li data-role="fieldcontain">
+                    <span id="translate23"></span><i style="margin-left:3%;" class='lIcon fa fa-heart'></i>
+                        <input id="slide3" type="range" name="slider2" id="slider2b" value="3" min="1" max="5" data-highlight="true">
+                    </li>
+ 
+
+                    <li>
+							<button  onclick="DatosSelector($('#slide1').val(),$('#slide2').val(),$('#slide3').val());" data-inline='true'><i class='lIcon fa fa-check'></i><span id="translate24"></span></button>
+
+                    </li>
+                </ul>
+
+				
+				
+				
+				
+				
+				
+
+				</li>
+							
+
+			</ul>
+
+	        
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page_ver_una1" onclick="VerTarjeta1(parseInt(IdCardActual)-1);"><i style="font-size: 15px !important;" class='blIcon fa fa-chevron-left'></i></a></li>
+					<li><a href="#MenuPrincipal"><i  style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+					<li><a href="#page_ver_una1" onclick="VerTarjeta1(parseInt(IdCardActual)+1);"><i  style="font-size: 15px !important;" class='blIcon fa fa-chevron-right'></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+</div>
+<!-- Fin -->	
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- Start -->	
+    <div data-role="page" data-theme='b' id="Buscar">
+
+
+
+        
+		
+		
+		
+        <div data-role="content">   
+
+		<div class='inset'>
+            
+	        <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="..." data-filter-theme="b" id="lista_buscar" >
+
+			
+				
+	        </ul>
+            
+		</div>
+	        
+	        
+        </div>
+		
+		
+		
+		
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-rel="back"><i style="font-size: 15px !important;" class='blIcon fa fa-chevron-left'></i></a></li>
+					<li><a href="#MenuPrincipal"><i style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+
+				</ul>
+			</div>
+		</div>
+		
+
+    </div>	
+<!-- Fin -->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Start -->	
+<div data-role="page" id="popupDialog" data-theme="b">
+            
+                <div data-role="header" data-theme="b">
+                    <h1><span id="translate12"></span></h1>
+                </div>
+        
+                <div data-role="content" data-theme="b">
+                    <p style="text-align:center;"><span id="translate9"></span></p>		            
+		            <a style="margin-left:35%;" href="#MenuPrincipal"  data-role="button" data-inline="true"><i class='lIcon fa fa-check'></i><span id="translate10"></span></a>     
+                </div>
+</div>
+<!-- Fin --> 	
+	
+	
+	
+		<!-- Start -->	
+<div data-role="page" id="popupDialog2" data-theme="b">
+            
+                <div data-role="header" data-theme="b">
+                    <h1><span id="translate12"></span></h1>
+                </div>
+        
+                <div data-role="content" data-theme="b">
+                    <p style="text-align:center;"><span id="translate11"></span></p>
+		            <a style="margin-left:35%;" href="#MenuPrincipal"  data-role="button" data-inline="true"><i class='lIcon fa fa-check'></i><span id="translate16"></span></a>        
+                </div>
+</div>
+<!-- Fin --> 
+
+
+
+
+
+		<!-- Start -->	
+<div data-role="page" id="popupDialog3" data-theme="b">
+            
+                <div data-role="header" data-theme="b">
+                    <h1><span id="translate12"></span></h1>
+                </div>
+        
+                <div data-role="content" data-theme="b">
+                    <p style="text-align:center;"><span id="translate15"></span></p>
+		            <a style="margin-left:35%;" href="#MenuPrincipal"  data-role="button" data-inline="true" onclick="PagActual=PagActual-1;Recargar_Ver_Todas();refreshPage();"><i class='lIcon fa fa-check'></i><span id="translate17"></span></a>        
+                </div>
+</div>
+<!-- Fin --> 	
+	
+	
+	
+
+		<!-- Start -->	
+<div data-role="page" id="popupDialog4" data-theme="b">
+            
+                <div data-role="header" data-theme="b">
+                    <h1><span id="translate12"></span></h1>
+                </div>
+        
+                <div data-role="content" data-theme="b">
+                    <p style="text-align:center;"><span id="translate18"></span></p>
+		            <a style="margin-left:35%;" href="#MenuPrincipal"  data-role="button" data-inline="true" onclick="VerTarjeta(parseInt(IdCardActual)-1);"><i class='lIcon fa fa-check'></i><span id="translate19"></span></a>        
+                </div>
+</div>
+<!-- Fin --> 	
+	
+	
+	
+	<!-- Start -->	
+	    <div data-role="page" data-theme='b' id="Info">
+
+
+
+        
+        <div data-role="content">   
+
+
+			<ul data-nativedroid-plugin='cards'>
+				<li data-cards-type='weather'>
+<div id="card_imagen"><img src="http://msnzapps.com/coleccion/kamasutra/css/logo.png" ></div>
+				</li>
+				<li data-cards-type='text'>
+<div id="card_imagen"><a href="http://www.msnzapps.com">MsnzApps</a> <span id="translate25"></span>  <a href="http://www.babymed.com/love/100-kama-sutra-positions">Babymed.com</a></div>
+				</li>
+
+				<li data-cards-type='text'>
+<p><span id="translate13"></span><a href="http://www.jquerymobile.com/">Jquery Mobile</a>  <a href="http://www.nativedroid.godesign.ch/">Native Droid</a></p> 
+				</li>
+				
+			</ul>   
+        </div>
+		
+		
+		<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-tap-toggle="false" data-theme='b' >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#MenuPrincipal"><i  style="font-size: 15px !important;" class='blIcon fa fa-home'></i></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+
+    </div>
+<!-- Fin --> 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Start -->
+<div data-role="page" data-theme='b'  id="MenuPrincipal">
+ <div data-role="content" id="botonera">
+
+<div id="menu_boton_logo" ><span id="logokamasutra" class="text-glow" >Kamasutra</span></div>
+<div id="menu_boton"><a href="#page_selector" ><i class='blIcon fa fa-flask'></i><span id="translate20"></span></a></div>
+<div id="menu_boton"><a href="#page_vertodas" ><i class='blIcon fa fa-list'></i><span id="translate1"></span></a></div>
+<div id="menu_boton"><a href="#Buscar" onclick="DatosAutocomplete();" ><i class='blIcon fa fa-search'></i><span id="translate2"></span></a></div>
+<div id="menu_boton"> <a href="#page_ver_una1" onclick="muestra_card_random();"><i class='blIcon fa fa-heart-o'></i><span id="translate3"></span></a></div>
+<div id="menu_boton"><a href="#page_vertodas_mejores" onclick="Recargar_Ver_Todas_Mejor();refreshPage();"><i class='blIcon fa fa-trophy'></i><span id="translate4"></span></a></div>
+
+<div id="menu_boton" class="botonpartido1" onclick=''><a href="" ><i class='blIcon fa fa-star'></i><span id="translate5"></span></a></div>
+<div id="menu_boton" class="botonpartido2"><a href="#Info"  ><i class='blIcon fa fa-info'></i><span id="translate6"></span></a></div>
+
+	
+
+  </div>
+  
+  
+</div>
+<!-- Fin -->	
+	
+	
+	
+	
+       
+	
+	
+	
+	
+	
+	
+    
+    <script src="js/nativedroid.script.js"></script>
+    </body>
+</html>

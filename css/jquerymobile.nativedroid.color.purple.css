@@ -1,0 +1,64 @@
+
+/**
+ * 
+ * PURPLE:
+ * 
+ * COLOR GUIDE:
+ * 	Light:   #CA637E  #CA637E
+ *  Dark:   #AD3757 #AD3757
+ * 
+ */
+
+
+.ui-bar-b,.ui-page-theme-b .ui-dialog-contain .ui-title {
+	border-bottom: 2px solid #CA637E;
+}
+
+.ui-btn-down-b .ui-btn-inner,.ui-btn-down-b .ui-btn-text .ui-link-inherit,.ui-listview .ui-btn-hover-b,.ui-input-search.ui-page-theme-b {
+	background-color: #CA637E;
+}
+
+.ui-page-theme-b form .ui-btn-down-b,.ui-page-theme-b form .ui-mini.ui-checkbox-on,.ui-page-theme-b form .ui-mini.ui-radio-on {
+	background-color: #AD3757;
+}
+
+.ui-page-theme-b .ui-btn:hover, html .ui-bar-b .ui-btn:hover, html .ui-page-theme-b .ui-btn:hover, html body .ui-group-theme-b .ui-btn:hover, html head+body .ui-btn.ui-btn-b:hover,
+.ui-page-theme-b .ui-btn:active, html .ui-bar-b .ui-btn:active, html .ui-page-theme-b .ui-btn:active, html body .ui-group-theme-b .ui-btn:active, html head+body .ui-btn.ui-btn-b:active {
+	color: #ffffff;
+	background-color: #AD3757;
+}
+
+.ui-page-theme-b div.ui-input-text.ui-focus:after{background-color: #AD3757;}
+.ui-page-theme-b div.ui-input-text.ui-focus:before{background-color: #AD3757;}
+.ui-page-theme-b div.ui-input-text.ui-focus {border-bottom: 1px solid #AD3757;}
+
+textarea.ui-page-theme-b.ui-input-text:focus {
+	border: 1px solid #AD3757;
+}
+
+.ui-page-theme-b .ui-link,.ui-page-theme-b .ui-li a,.nativeDroidCards ul[data-nativedroid-plugin="twitter"] a {
+	color: #AD3757;
+}
+
+.ui-page-theme-b .table-stroke tr:nth-child(even) .ui-link {
+	color: #CA637E;
+}
+
+.ui-slider-track .ui-btn.ui-slider-handle {
+	border: 10px solid rgba(207,159,231,0.3);	
+}
+
+.ui-slider-track .ui-btn.ui-slider-handle.ui-focus {
+	border: 10px solid rgba(207,159,231,0.5);	
+	box-shadow: 0px 0px 2px 0px #AD3757;
+}
+
+.ui-slider-bg.ui-btn-active {
+	background-color: #CA637E;
+}
+progress::-webkit-progress-value {
+	background-color: #AD3757;
+}
+progress::-moz-progress-bar {
+	background-color: #AD3757;
+}

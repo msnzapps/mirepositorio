@@ -1,0 +1,329 @@
+#card_separador{
+height:10px;
+width:100%;
+border-bottom: 1px solid #ccc;
+
+
+}
+
+#card_imagen{
+text-align:center;
+    width: 100%;
+
+}
+
+
+/* resize images */
+#card_imagen img {
+
+    width: 100%;
+    height: auto;
+	
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+#MenuPrincipal{
+background-image: url("fondo.jpg");
+   background-size:100% 100%;
+}
+
+#cuadrosmenu{
+border-style: solid;
+    border-color: red;
+}
+
+#botonera{
+width:70%;
+text-align:center;
+margin-right:auto;
+margin-left:auto;
+margin-top:7%;
+opacity: 0.6;
+}
+
+#menu_boton{
+
+background-color:#000;
+padding:0.5%;
+
+
+margin-bottom:7%;
+
+    border-style: solid;
+    border-width: 1px;
+	border-color:#591D2D;
+	
+	
+    border: 1px solid #591D2D;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #591D2D inset;
+    color: #591D2D;
+
+    padding: 5px 10px;
+    outline: none;	
+	
+}
+
+
+#menu_boton:active{
+opacity: 0.4;
+    border-style: solid;
+    border-width: 1px;
+	border-color:#000;
+}
+
+#menu_boton:hover{
+opacity: 0.4;
+    border-style: solid;
+    border-width: 1px;
+	border-color:#000;
+}
+			
+#menu_boton a {
+
+
+color:#F0F0F0 !important;
+
+}			
+		
+
+
+		
+@font-face {
+    font-family: Indio;
+    src: url(indio.ttf);
+	
+}
+
+	
+#logokamasutra{
+
+font-family: Indio !important;
+padding:0.5%;
+opacity: 1;
+
+margin-bottom:7%;
+font-size: 250%;
+
+
+
+	
+}
+
+#menu_boton_logo{
+margin-bottom:10%;
+margin-top:-2%;
+}
+
+
+
+
+
+
+
+.text-glow{
+text-shadow: 0 1px 0 #ccc,
+               0 1px 0 #c9c9c9,
+               0 2px 0 #bbb,
+               0 2px 0 #b9b9b9,
+               0 3px 0 #aaa,
+               0 3px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 2px 5px rgba(0,0,0,.2),
+               0 3px 10px rgba(0,0,0,.25),
+               0 50px 10px rgba(0,0,0,.2),
+               0 10px 20px rgba(0,0,0,.15);
+			   
+		   
+}
+
+
+
+
+#page_selector{
+background-image: url("fondo_largo.jpg")!important;
+background-size:100%  !important;
+}
+
+#page_ver_una1{
+
+background-image: url("fondo_largo.jpg")!important;
+background-size:100%  !important;
+
+}
+#page_ver_una2{
+
+background-image: url("fondo_largo.jpg")!important;
+background-size:100%  !important;
+
+}
+
+#licard{
+background-color:rgba(0,0,0,0.5);
+width:90% !important;
+margin-right:auto !important;
+margin-left:auto !important;
+}
+
+
+
+
+.botonpartido1{
+width:39%;
+float:left;
+
+}	
+
+.botonpartido2{
+width:38%;
+float:right;
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.likebotonpartido1{
+background-color:#11772D;
+width:49%;
+text-align:center;
+float:left;
+}
+
+.likebotonpartido1 a{
+color:#fff !important;
+}
+
+
+
+
+.likebotonpartido1:hover{
+background-color:#3E9155;
+width:49%;
+text-align:center;
+float:left;
+}
+.likebotonpartido1:active{
+background-color:#3E9155;
+width:49%;
+text-align:center;
+float:left;
+}
+
+
+
+.likebotonpartido2{
+background-color:#C83637;
+width:49%;
+text-align:center;
+float:right !important;
+}
+
+.likebotonpartido2 a{
+color:#fff !important;
+}
+
+.likebotonpartido2:hover{
+background-color:#B54F51;
+
+float:right !important;
+}
+.likebotonpartido2:active{
+background-color:#B54F51;
+
+float:right !important;
+}
+
+
+
+
+
+
+
+
+/* para el numerito ke aparece a la izquierda del selector*/
+.ui-slider-input {
+margin-left:-3% !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+.progress { margin: 1em 0;background:#ccc !important;width:50%; }
+.progress-filled { height: 0.3em; margin: -1px;background:#3E9155 !important; }
+
+
+
+
+
+
+.ui-page {
+    -webkit-backface-visibility: hidden !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
